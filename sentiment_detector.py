@@ -174,7 +174,7 @@ class NeuralNetwork :
             if(i%2500 ==0):
                 print(" ")
                
-            #Training is done+++++++++++++++++++
+            #Training is done++++++++++
                 
     def test(self, testing_reviews, testing_labels):
         correct =0
