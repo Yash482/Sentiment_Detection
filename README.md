@@ -11,3 +11,4 @@ Words like 'the' , 'is' , 'to' etc. comes more and in both kind of review. This 
 Even if they are given less weight, their count is more( as we did +1 for each appearance in a review) and the do more negative.
 To reduce it, we do =1 for each word. This gives equal importance to each word and accuracy increases to approx 80%. 
 
+Further, we apply polarity cutoff which increases accuracy to 85%.
