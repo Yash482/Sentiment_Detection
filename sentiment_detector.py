@@ -191,7 +191,9 @@ class NeuralNetwork :
             
             
             sys.stdout.write("\rProgress: " + str(100* i/float(len(testing_reviews)))[:4] + "% Speed(reviews/sec): " + str(reviews_per_sec)[0:5] + "%Correct: " + str(correct) + "#Tested: " + str(i+1) +" Testing Accuracy: " + str(correct/(i+1)))                        
-
+    
+    def predict(self, review):
+        return self.run(review)
             
     def run(self, review):
         self.update_input_layer(review)
@@ -207,8 +209,10 @@ nn = NeuralNetwork(reviews[:-1000], labels[:-1000], hidden_nodes= 10, min_count 
 nn.train(reviews[:-1000], labels[:-1000])
 nn.test(reviews[-1000:], labels[-1000:])
                     
-        
-
+print("   ")
+review1 = 'It was just a waste of time to watch a movie like this. No story was there'
+review2 = 'It was a wonderful and beautiful movie. too good. I loved it'
+print(nn.predict(review2))
 
 
 
